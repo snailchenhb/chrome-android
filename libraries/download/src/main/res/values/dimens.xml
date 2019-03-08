@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2014 The Chromium Authors. All rights reserved.
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file. -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="list_item_subsection_margin">40dp</dimen>
+	<dimen name="list_item_default_margin">16dp</dimen>
+	<dimen name="list_item_start_icon_corner_radius">18dp</dimen>
+	<dimen name="download_manager_section_title_padding_image">8dp</dimen>
+	<dimen name="download_manager_section_title_padding_top">16dp</dimen>
+    <dimen name="download_manager_section_title_padding_bottom">0dp</dimen>
+	<dimen name="list_item_start_icon_width">36dp</dimen>
+	<dimen name="toolbar_height_no_shadow">56dp</dimen>
+</resources>

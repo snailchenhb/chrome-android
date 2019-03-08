@@ -1,0 +1,160 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion "android-28"
+
+    defaultConfig {
+        applicationId "org.chromium.chrome"
+        vectorDrawables.useSupportLibrary = true
+        minSdkVersion 19
+        targetSdkVersion 28
+        multiDexEnabled true
+        ndk {
+            abiFilters "arm64-v8a"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            java.filter.exclude(
+                    "com/google/protobuf/DiscardUnknownFieldsParser.java",
+                    "com/google/protobuf/MessageOrBuilder.java",
+                    "com/google/protobuf/Extension.java",
+                    "com/google/protobuf/TextFormatParseInfoTree.java",
+                    "com/google/protobuf/RpcController.java",
+                    "com/google/protobuf/AbstractMessage.java",
+                    "com/google/protobuf/TextFormat.java",
+                    "com/google/protobuf/ServiceException.java",
+                    "com/google/protobuf/Service.java",
+                    "com/google/protobuf/MapField.java",
+                    "com/google/protobuf/RpcCallback.java",
+                    "com/google/protobuf/DynamicMessage.java",
+                    "com/google/protobuf/ExtensionRegistry.java",
+                    "com/google/protobuf/GeneratedMessage.java",
+                    "com/google/protobuf/MapEntry.java",
+                    "com/google/protobuf/MessageReflection.java",
+                    "com/google/protobuf/RepeatedFieldBuilderV3.java",
+                    "com/google/protobuf/BlockingService.java",
+                    "com/google/protobuf/TextFormatParseLocation.java",
+                    "com/google/protobuf/RepeatedFieldBuilder.java",
+                    "com/google/protobuf/SingleFieldBuilderV3.java",
+                    "com/google/protobuf/GeneratedMessageV3.java",
+                    "com/google/protobuf/ProtocolMessageEnum.java",
+                    "com/google/protobuf/RpcChannel.java",
+                    "com/google/protobuf/Descriptors.java",
+                    "com/google/protobuf/UnknownFieldSet.java",
+                    "com/google/protobuf/RpcUtil.java",
+                    "com/google/protobuf/SingleFieldBuilder.java",
+                    "com/google/protobuf/BlockingRpcChannel.java",
+                    "com/google/protobuf/Message.java",
+                    "org/chromium/device/geolocation/LocationProviderOverrider.java",
+                    "org/chromium/device/geolocation/MockLocationProvider.java",
+                    "test/org/chromium/media/*.java",
+                    "org/chromium/components/autofill/AutofillProvider.java",
+                    "org/chromium/components/autofill/FormData.java",
+                    "org/chromium/components/autofill/FormFieldData.java",
+                    "org/chromium/components/embedder_support/view/ContentViewRenderView.java",
+                    "org/chromium/components/embedder_support/media/*.java",
+                    "org/chromium/base/BundleCanary.java",
+                    "android/support/customtabs/trusted/LauncherActivity.java",
+                    "android/support/customtabs/trusted/ManageDataLauncherActivity.java",
+                    "com/google/android/libraries/feed/testing/sharedstream/offlinemonitor/*.java",
+                    "com/google/android/libraries/feed/testing/modelprovider/*.java",
+                    "com/google/android/libraries/feed/testing/shadows/*.java",
+                    "com/google/android/libraries/feed/basicstream/internal/drivers/testing/*.java",
+                    "com/google/android/libraries/feed/common/concurrent/testing/*.java",
+                    "com/google/android/libraries/feed/common/testing/*.java",
+                    "com/google/android/libraries/feed/feedstore/testing/*.java",
+                    "com/google/android/libraries/feed/testing/conformance/storage/*.java",
+                    "com/google/android/libraries/feed/testing/conformance/network/*.java",
+                    "com/google/android/libraries/feed/feedsessionmanager/internal/testing/*.java",
+                    "com/google/android/libraries/feed/api/common/testing/*.java",
+                    "com/google/android/libraries/feed/testing/sharedstream/contextmenumanager/*.java",
+                    "com/google/android/libraries/feed/testing/conformance/scheduler/*.java",
+                    "com/google/android/libraries/feed/testing/host/stream/*.java",
+                    "com/google/android/libraries/feed/testing/host/offlineindicator/*.java",
+                    "org/chromium/chrome/browser/metrics/UkmUtilsForTest.java",
+                    "org/chromium/chrome/browser/preferences/password/PasswordEntryEditorPreference.java",
+                    "org/chromium/chrome/browser/offlinepages/downloads/OfflinePageNotificationBridge.java",
+                    "org/chromium/chrome/browser/offlinepages/evaluation/*.java",
+                    "org/chromium/chrome/browser/MonochromeApplication.java",
+                    "org/chromium/chrome/browser/autofill/keyboard_accessory/PasswordAccessorySheetView.java",
+                    "com/google/protobuf/*.java",
+                    "com/google/protobuf/micro/*.java",
+                    "org/chromium/components/webrestrictions/browser/WebRestrictionsClient.java",
+                    "org/chromium/components/webrestrictions/browser/WebRestrictionsClientResult.java",
+            )
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    aaptOptions {
+        noCompress "dat", "bin", "pak"
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/com_google_android_gms_play_services_auth_base_java.jar')
+    implementation files('libs/com_google_android_gms_play_services_base_java.jar')
+    implementation files('libs/com_google_android_gms_play_services_basement_java.jar')
+    implementation files('libs/com_google_android_gms_play_services_cast_framework_java.jar')
+    implementation files('libs/com_google_android_gms_play_services_cast_java.jar')
+    implementation files('libs/com_google_android_gms_play_services_fido_java.jar')
+    implementation files('libs/com_google_android_gms_play_services_gcm_java.jar')
+    implementation files('libs/com_google_android_gms_play_services_iid_java.jar')
+    implementation files('libs/com_google_android_gms_play_services_location_java.jar')
+    implementation files('libs/com_google_android_gms_play_services_tasks_java.jar')
+    implementation files('libs/com_google_android_gms_play_services_vision_common_java.jar')
+    implementation files('libs/com_google_android_gms_play_services_vision_java.jar')
+    implementation files('libs/com_google_dagger_dagger.jar')
+    implementation files('libs/gcm.jar')
+    implementation files('libs/gvr_common_java.jar')
+    implementation files('libs/javax_inject_javax_inject.jar')
+    implementation project(':libraries:autofill')
+    implementation project(':libraries:autofill_assistant')
+    implementation project(':libraries:content')
+    implementation project(':libraries:download')
+    implementation project(':libraries:media')
+    implementation project(':libraries:ui')
+    implementation project(':libraries:customtabs')
+    implementation 'com.android.support:mediarouter-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-vector-drawable:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:support-v13:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:gridlayout-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:multidex:1.0.0'
+    compileOnly 'javax.annotation:javax.annotation-api:1.2'
+    implementation files('libs/protobuf_lite_javalib.jar')
+    implementation files('libs/protobuf_nano_javalib.jar')
+    implementation project(':libraries:feed')
+    implementation project(':libraries:embedder_support')
+}

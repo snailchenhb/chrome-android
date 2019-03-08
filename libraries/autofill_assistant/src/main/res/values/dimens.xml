@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2014 The Chromium Authors. All rights reserved.
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file. -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="autofill_assistant_details_image_size">48dp</dimen>
+	<dimen name="payments_ui_translation">100dp</dimen>
+</resources>

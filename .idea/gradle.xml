@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/libraries" />
+            <option value="$PROJECT_DIR$/libraries/autofill" />
+            <option value="$PROJECT_DIR$/libraries/autofill_assistant" />
+            <option value="$PROJECT_DIR$/libraries/content" />
+            <option value="$PROJECT_DIR$/libraries/customtabs" />
+            <option value="$PROJECT_DIR$/libraries/download" />
+            <option value="$PROJECT_DIR$/libraries/embedder_support" />
+            <option value="$PROJECT_DIR$/libraries/feed" />
+            <option value="$PROJECT_DIR$/libraries/media" />
+            <option value="$PROJECT_DIR$/libraries/ui" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

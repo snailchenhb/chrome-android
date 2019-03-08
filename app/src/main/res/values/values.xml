@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2011 The Chromium Authors. All rights reserved.
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file. -->
+
+<resources
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation"
+	xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Menu Animation Constants -->
+    <item type="fraction" format="fraction" name="menu_animation_pivot_x">95%</item>
+
+    <!-- Full Screen Constants -->
+    <!-- These constants were chosen empirically for their visually pleasant behavior.
+         Contact tedchoc@chromium.org or dtrainor@chromium.org for questions about
+         changing these values. -->
+    <item name="top_controls_show_threshold" format="float" type="dimen">0.5</item>
+    <item name="top_controls_hide_threshold" format="float" type="dimen">0.5</item>
+
+    <!-- The number of thumbnails that the thumbnail cache can hold. -->
+    <integer name="default_thumbnail_cache_size">5</integer>
+    <!-- The number of approximation thumbnails that the approximation cache can hold. -->
+    <integer name="default_approximation_thumbnail_cache_size">32</integer>
+    <!-- The maximum size of the write queue in the thumbnail cache. -->
+    <integer name="default_write_queue_size">5</integer>
+    <!-- The maximum size of the compression queue in the thumbnail cache. -->
+    <integer name="default_compression_queue_size">5</integer>
+    <!-- Compositor Tab Title Text -->
+    <bool name="compositor_tab_title_fake_bold_text">true</bool>
+
+    <!-- TabSwitcher - Maximum amount to tilt tabs in over scroll in degrees. -->
+    <integer name="over_scroll_angle">15</integer>
+
+    <!-- Toolbar/AppMenu - Drawable level on reload image button -->
+    <integer name="reload_button_level_reload">0</integer>
+    <integer name="reload_button_level_stop">1</integer>
+
+    <!-- Help and Feedback
+         These constants should be in sync with the context names on go/mobilehelprecs.
+         If the context ID cannot be found, the default help page will be shown to the user.-->
+    <string name="help_context_autofill">android_autofill_ota</string>
+    <string name="help_context_new_tab">mobile_new_tab</string>
+    <string name="help_context_search_results">mobile_search_results</string>
+    <string name="help_context_webpage">mobile_webpage</string>
+    <string name="help_context_settings">mobile_settings</string>
+    <string name="help_context_incognito">mobile_incognito</string>
+    <string name="help_context_bookmarks">mobile_bookmarks</string>
+    <string name="help_context_history">mobile_history</string>
+    <string name="help_context_privacy">mobile_privacy</string>
+    <string name="help_context_translate">mobile_translate</string>
+    <string name="help_context_general">mobile_general</string>
+    <string name="help_context_protected_content">protected_content</string>
+    <string name="help_context_data_reduction">reduce_data_usage</string>
+    <string name="help_context_incognito_learn_more">chrome_incognito</string>
+    <string name="help_context_usage_reports">send_crash_report</string>
+    <string name="help_context_sad_tab">mobile_awsnap</string>
+    <string name="help_context_clear_browsing_data">clear_browsing_data</string>
+    <string name="help_context_change_sync_passphrase">change_sync_passphrase</string>
+    <string name="help_context_sync_and_services">syncgoogleservices</string>
+    <!-- TODO(peconn): Add help section. -->
+    <!-- <string name="help_context_suggestions">mobile_content_suggestions</string> -->
+
+    <!-- Our manage space activity. Default pre-KitKat to be nothing. -->
+    <string name="manage_space_activity"></string>
+
+    <!-- Value for scaleX to mirror drawables correctly for LTR / RTL layouts. -->
+    <integer name="automirror_scale_x_reverse">-1</integer>
+
+    <!-- Modern List Item -->
+    <integer name="list_item_level_default">0</integer>
+    <integer name="list_item_level_selected">1</integer>
+    <integer name="list_item_level_incognito">2</integer>
+
+    <!-- Download InfoBar animation. -->
+    <integer name="download_infobar_sweep_up_delay">500</integer>
+    <integer name="download_infobar_sweep_down_delay">800</integer>
+    <integer name="download_infobar_fill_in_delay">1200</integer>
+    <integer name="download_infobar_fill_out_delay">200</integer>
+    <integer name="download_infobar_bar_start_offset">800</integer>
+    <integer name="download_infobar_bar_fill_in_delay">400</integer>
+    <integer name="download_infobar_bar_fill_out_delay">200</integer>
+	
+	<!-- vr/gvr/platform/common/android/res/values/colors.xml -->
+<eat-comment/>
+<color name="alignment_marker_color">#b4b4b4</color>
+<color name="white_transparent">#4cFFFFFF</color>
+<!-- vr/gvr/platform/common/android/res/values/dimens.xml -->
+<eat-comment/>
+<dimen name="alignment_marker_height">24mm</dimen>
+<dimen name="alignment_marker_thickness">2dip</dimen>
+<dimen name="transition_bottom_bar_height">112dip</dimen>
+<!-- vr/gvr/platform/common/android/res/values/strings.xml -->
+<eat-comment/>
+<string name="back_button_content_description" description=" Accessibility description for the back button displayed in the top corner of the VR application to go back to the previous screen. [CHAR LIMIT=50]">
+    back
+  </string>
+<string name="cancel_button" description=" Short text shown in a button in the dialog box that shows up to help users configure their Cardboard experience. By clicking on this button, the user will cancel the setup flow and return to their previous activity. [CHAR LIMIT=20]">
+      Cancel
+    </string>
+<string name="dialog_button_got_it" description=" Button text when the user is prompted with an action but can refuse that action. This communicates that the user has understood the dialog but wishes to take no further action, similar to CANCEL. [CHAR LIMIT=30]">
+    GOT IT
+  </string>
+<string name="dialog_button_open_help_center" description=" Button text when the user is prompted to open the Daydream Help Center. [CHAR LIMIT=40]">
+    OPEN HELP CENTER
+  </string>
+<string name="dialog_message_incompatible_phone" description=" Text shown in a dialog telling the user that their phone is not a Daydream-compatible phone, also directing them to the Daydream Help Center website. [CHAR LIMIT=200]">
+    A Daydream-ready phone is required. Visit the Daydream Help Center for more information.
+  </string>
+<string name="dialog_message_no_cardboard" description=" Text shown inside the dialog box that shows up to help users configure their Cardboard experience. This string is displayed when the user doesn't have the cardboard app installed. [CHAR LIMIT=200]">
+      Get the Cardboard app in order to configure your viewer.
+    </string>
+<string name="dialog_title" description=" Short text for the title of the dialog box that shows up to help users configure their Cardboard experience. [CHAR LIMIT=30]">
+      Configure
+    </string>
+<string name="dialog_title_incompatible_phone" description=" Short title text for the dialog telling the user that their phone is incompatible. [CHAR LIMIT=30]">
+    Incompatible phone
+  </string>
+<string name="dialog_title_vr_core_not_enabled" description=" Short title text for the dialog telling the user that additional setup is required (for VrCore). [CHAR LIMIT = 30]">
+    Setup required
+  </string>
+<string name="dialog_title_vr_core_not_installed" description=" Short title text for the dialog telling the user that installation is required (for VrCore). [CHAR LIMIT = 30]">
+    Install required
+  </string>
+<string name="dialog_title_warning" description="Title of warning dialogs shown to user. [CHAR LIMIT=25]">
+    Warning
+  </string>
+<string name="dialog_vr_core_not_enabled" description="Dialog to show before redirecting user to VrListenerService Settings. [CHAR LIMIT=250]">
+    This application may not work properly without enabling Google VR Services, please enable this
+    in phone Settings before continuing.
+  </string>
+<string name="dialog_vr_core_not_installed" description="Dialog to show before redirecting user to download VrCore. [CHAR LIMIT=250]">
+    This application may not work properly without Google VR Services.  Please install
+    Google VR Services from the Play Store before continuing.
+  </string>
+<string name="go_to_playstore_button" description=" Short text shown in a button in the dialog box that shows up to help users configure their Cardboard experience. By clicking on this button, the user goes to the Cardboard app page on Playstore. [CHAR LIMIT=30]">
+      Go to the Play Store
+    </string>
+<string name="go_to_vr_listeners_settings_button" description="Short text shown in a button in the dialog box that allows users to open Settings         for Google VR Services. [CHAR LIMIT=30]">
+    Go to Settings
+  </string>
+<string name="gvr_vr_mode_component" translatable="false" description="Google VR component name used for enabling VR mode">com.google.vr.vrcore/com.google.vr.vrcore.common.VrCoreListenerService</string>
+<string name="no_browser_text" description=" Error message displayed as a Toast when Android could not find a browser to open a website. [CHAR LIMIT=50]">
+      No browser to open website
+    </string>
+<string name="place_your_phone_into_cardboard" description=" Message asking the user to place their phone into Cardboard. This is a generic message used in the absence of knowing the current viewer. [CHAR LIMIT=50]">
+      Place your phone into your Cardboard viewer
+    </string>
+<string name="place_your_viewer_into_viewer_format" description=" Message format asking the user to place their phone into the Cardboard compatible viewer that is currently configured. [CHAR LIMIT=50]">
+      Place your phone into your <xliff:g id="viewer_name" example="Cardboard I/O 2015">%s</xliff:g> viewer
+    </string>
+<string name="settings_button_content_description" description=" Accessibility description for the settings button displayed at the bottom of a VR application. [CHAR LIMIT=50]">
+    settings
+  </string>
+<string name="setup_button" description=" Short text shown in a button in the dialog box that shows up to help users configure their Cardboard experience. By clicking on this button, the user is taken to the Cardboard app to setup their Cardboard viewer. [CHAR LIMIT=30]">
+      Setup
+    </string>
+<string name="switch_viewer_action" description=" Text which when pressed, takes the user to the view that allows them to switch their Cardboard compatible viewer. [CHAR LIMIT=10]">
+      Switch
+    </string>
+<string name="switch_viewer_prompt" description=" Prompt asking if the user wants to switch their Cardboard compatible viewer. [CHAR LIMIT=45]">
+      Using a different viewer?
+    </string>
+<!-- vr/gvr/platform/common/android/res/values/style.xml -->
+<eat-comment/>
+<style name="GvrDialogTheme" parent="@android:style/Theme.Holo.Light.Dialog">
+<item name="android:windowBackground">@android:color/transparent</item>
+</style>
+<!-- vr/gvr/platform/common/android/res/values/vr_activity_style.xml -->
+<eat-comment/>
+<style name="NoSystemUI" parent="VrActivityTheme">
+</style>
+<!-- vr/gvr/platform/common/android/res/values/style.xml -->
+<eat-comment/>
+<style name="UiButton">
+<item name="android:layout_width">wrap_content</item>
+<item name="android:background">@drawable/rippleable</item>
+<item name="android:layout_height">wrap_content</item>
+<item name="android:padding">9dip</item>
+</style>
+<eat-comment/>
+<integer name="google_play_services_version">12451000</integer>
+<!-- vr/gvr/platform/common/android/res/values/vr_activity_style.xml -->
+<eat-comment/>
+<style name="VrActivityTheme" parent="@android:style/Theme.Black.NoTitleBar">
+<item name="android:windowFullscreen">true</item>
+<item name="android:windowAnimationStyle">@null</item>
+<item name="android:windowActionBar">false</item>
+<item name="android:windowDisablePreview">true</item>
+<item name="android:windowContentOverlay">@null</item>
+</style>
+<item type="id" name="compressed_series" />
+<item type="id" name="original_series" />
+</resources>

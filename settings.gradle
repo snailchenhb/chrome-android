@@ -1,0 +1,1 @@
+include ':app', ':libraries:media', ':libraries:ui', ':libraries:autofill_assistant', ':libraries:download', ':libraries:autofill', ':libraries:content', ':libraries:customtabs', ':libraries:feed', ':libraries:embedder_support'

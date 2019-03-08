@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2014 The Chromium Authors. All rights reserved.
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file. -->
+
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <style name="BlackCaption" ns1:ignore="UnusedResources">
+        <item name="android:textColor">@color/default_text_color_secondary_list</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+	<style name="BlackCaptionDefault" ns1:ignore="UnusedResources">
+        <item name="android:textColor">@color/default_text_color_list</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+</resources>

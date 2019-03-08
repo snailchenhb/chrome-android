@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2014 The Chromium Authors. All rights reserved.
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file. -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+	<color name="modern_primary_color">@android:color/white</color>
+	<color name="toolbar_shadow_color">#1D000000</color>
+</resources>
